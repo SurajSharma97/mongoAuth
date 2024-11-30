@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="https://unpkg.com/toaster-js/umd.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/toaster-js/default.css"/>
+</head>
+<body>
+    <div class=" w-full h-screen bg-zinc-800 p-10 text-white">
+        <h1 class="text-3xl tracking-tighter bold">Admin Panel</h1>
+<div class="w-full flex gap-5 mt-10">
+<%users.forEach((e)=>{%>
+    <div class="bg-zinc-600 rounded-md p-5 flex flex-col align-middle justify-center ">
+        <div class="image w-80 h-96 overflow-hidden object-cover rounded-md">
+            <img src="https://images.unsplash.com/photo-1731139514048-ed808f7db345?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+        <h1 class="uppercase tracking-tighter text-2xl text-zinc-200 mt-1"><%=e.username%></h1>
+        <h3 class=" tracking-tighter text-xl text-red-300"><%=e.email%></h3>
+    </div>
+<%})%>
+
+</div>
+</div>
+
+    </div>
+</body>
+</html>
